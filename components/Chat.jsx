@@ -52,6 +52,12 @@ return (
           blockHeight: message.block_height,
         }}
       />
+        <Widget
+        src="mob.near/widget/People"
+        props={{
+          blockHeight: message.block_height,
+        }}
+      />
       <p>{message.text}</p>
     </Message>
   ))}
