@@ -1,11 +1,11 @@
 const contract =
-'8a6c221d64bdcd4dc32d5738d5b75dec12eb684faf7a11da87e6d24aa8763ff8';
+'ece61a112fbb05b5ff96fd4d63cb259c4bae966477829666d46ddc4e5121d801';
 
 State.init({
 message: '',
 });
 
-const messages = Near.view(contract, 'get_messages', { limit: 5 });
+const messages = Near.view(contract, 'get_messages', { limit: 3 });
 
 const Message = styled.div`
 display: flex;
@@ -53,7 +53,19 @@ return (
         }}
       />
         <Widget
-        src="mob.near/widget/People"
+        src="sking.near/widget/Bounties.Components.Background"
+        props={{
+          blockHeight: message.block_height,
+        }}
+      />
+        <Widget
+        src="zahidulislam.near/widget/TicTacToe"
+        props={{
+          blockHeight: message.block_height,
+        }}
+      />
+          <Widget
+        src=""
         props={{
           blockHeight: message.block_height,
         }}
